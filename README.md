@@ -6,6 +6,7 @@
 - [Day2](#day2)
 - [Day3](#day3)
 - [Day4](#day4)
+- [Day5](#day5)
 
 ## 一, Learning axvisor
 
@@ -63,3 +64,11 @@
     - 使用`trait`关联来减少泛型链
     - 一些辅助: 增加trait表达, 边界处理等
 5. 看了基于 ARMv8 两阶段地址翻译的内存虚拟化的视频
+
+### Day5
+在查看src/address_space/backend/alloc.rs时, 发现`map_alloc`使用的map存在一些文档问题
+- 拼写错误
+- 地址对齐的描述问题
+  [PR链接](https://github.com/arceos-org/page_table_multiarch/pull/23) 
+
+  
