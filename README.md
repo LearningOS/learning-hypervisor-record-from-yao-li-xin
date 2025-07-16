@@ -7,8 +7,9 @@
 - [Day3](#day3)
 - [Day4](#day4)
 - [Day5](#day5)
+- [Day6](#day6)
 
-## 一, Learning axvisor
+
 
 ### Day1
 
@@ -68,7 +69,14 @@
 ### Day5
 在查看src/address_space/backend/alloc.rs时, 发现`map_alloc`使用的map存在一些文档问题
 - 拼写错误
+
 - 地址对齐的描述问题
-  [PR链接](https://github.com/arceos-org/page_table_multiarch/pull/23) 
+
+- [PR链接](https://github.com/arceos-org/page_table_multiarch/pull/23) 
+  
+### Day6
+
+- 学习了ARMv8 下的 I/O 与中断虚拟化
+- 尝试编写测试代码, 本地没什么问题, 准备再审视一下()
 
   
