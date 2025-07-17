@@ -8,6 +8,7 @@
 - [Day4](#day4)
 - [Day5](#day5)
 - [Day6](#day6)
+- [Day7](#day7)
 
 
 
@@ -78,5 +79,10 @@
 
 - 学习了ARMv8 下的 I/O 与中断虚拟化
 - 尝试编写测试代码, 本地没什么问题, 准备再审视一下()
+
+### Day7
+- 测试代码已push到我fork仓库的分支上了, 等苏助教评审, 改进
+- 对于Drop的多线程测试还没有解决
+- [链接](https://github.com/manchangfengxu/axaddrspace/tree/feat/add-frame-tests)
 
   
