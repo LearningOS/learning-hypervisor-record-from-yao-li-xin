@@ -2,6 +2,7 @@
 
 ## 目录
 
+### 7月
 - [Day1](#day1)
 - [Day2](#day2)
 - [Day3](#day3)
@@ -9,6 +10,7 @@
 - [Day5](#day5)
 - [Day6](#day6)
 - [Day7](#day7)
+- [Day8](#day8)
 
 
 
@@ -84,5 +86,14 @@
 - 测试代码已push到我fork仓库的分支上了, 等苏助教评审, 改进
 - 对于Drop的多线程测试还没有解决
 - [链接](https://github.com/manchangfengxu/axaddrspace/tree/feat/add-frame-tests)
+
+### Day8
+今天完善了测试代码, 并解决了多线程环境下Drop测试的问题
+- 通过引入一个全局的 TEST_MUTEX 来强制需要共享状态的测试串行执行，解决了并行测试中因资源竞争导致的随机失败和 Drop 计数不准确的问题。
+- 为`test_alloc_dealloc_cycle()`和`test_alloc_no_memory()`增加alloc是否成功下的Drop的测试
+- 增加了关键部分的注释
+- PR链接: [feat: Implement unit tests for PhysFrame](https://github.com/arceos-hypervisor/axaddrspace/pull/17)
+
+
 
   
