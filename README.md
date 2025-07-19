@@ -11,6 +11,7 @@
 - [Day6](#day6)
 - [Day7](#day7)
 - [Day8](#day8)
+- [Day9](#day9)
 
 
 
@@ -43,7 +44,7 @@
     - 主要流程: id, 时钟, 硬件寄存器等的配置 -> 为gust vm配置主vcpu -> 设置vm为running-> 将vcpu放置到运行队列等待调度
 
 ### Day3
-- 更细粒度的阅读了一下源码, 因为大部分都被分离成了crate, 所以源码基本都是和启动相关的, 进行了更细粒度的整理, 在axvisor源码.md里
+- 更细粒度的阅读了一下源码, 因为大部分都被分离成了crate, 所以源码基本都是和启动相关的, 进行了更细粒度的整理, 在`axvisor start.md`里
 - 读完了vm-exit的设计, 了解了axvcpu, axvm, axvmm的多层vm_exit处理机制
 
 ### Day4
@@ -75,7 +76,7 @@
 
 - 地址对齐的描述问题
 
-- [PR链接](https://github.com/arceos-org/page_table_multiarch/pull/23) 
+- PR链接: [fix(docs): Clarify alignment behavior and fix typo in map function](https://github.com/arceos-org/page_table_multiarch/pull/23) 
   
 ### Day6
 
@@ -96,4 +97,21 @@
 
 
 
-  
+### Day9
+
+今天主要是根据苏助教的 review 改善代码，要更改的细节有点多。
+
+- 添加了 `assert_matches!`
+- 引入了 `BASE_PADDR` 和 `MEMORY_LEN` 常量，来配置模拟内存。
+- 将 `ALLOC_FAIL` 重命名为 `ALLOC_SHOULD_FAIL`。
+- 实现了 `MockHal::reset_state()` 方法，确保在每个测试执行前所有共享静态变量都能被重置到干净状态
+- `test_alloc_zero` 和 `test_fill_operation` 中的内存访问断言已重构，改用切片迭代器 (`&[u8; PAGE_SIZE].iter().all()`)。
+- **** 为常量、静态变量、`MockHal` 结构体及其方法增加了全面的文档注释 (`///`)，极大地提升了代码的可理解性。
+- 添加注释阐释了 `MockHal` 上 `Debug` derive 的目的
+
+
+
+
+
+
+
