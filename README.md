@@ -12,6 +12,7 @@
 - [Day7](#day7)
 - [Day8](#day8)
 - [Day9](#day9)
+- [Day10](#day10)
 
 
 
@@ -106,10 +107,33 @@
 - 将 `ALLOC_FAIL` 重命名为 `ALLOC_SHOULD_FAIL`。
 - 实现了 `MockHal::reset_state()` 方法，确保在每个测试执行前所有共享静态变量都能被重置到干净状态
 - `test_alloc_zero` 和 `test_fill_operation` 中的内存访问断言已重构，改用切片迭代器 (`&[u8; PAGE_SIZE].iter().all()`)。
-- **** 为常量、静态变量、`MockHal` 结构体及其方法增加了全面的文档注释 (`///`)，极大地提升了代码的可理解性。
+- 为常量、静态变量、`MockHal` 结构体及其方法增加了全面的文档注释 (`///`)，增加了更多的comment。
 - 添加注释阐释了 `MockHal` 上 `Debug` derive 的目的
 
 
+
+### Day10
+
+1. 测试代码
+
+   - 加入了多页面fill的测试
+
+   - 改了一些注释
+
+   - 更改了`assert_matches!`的验证方式
+
+2. 参考x86vcpu实现, 了解虚拟化硬件配置, 阅读了`fn hardware_enable(&mut self) -> AxResult`的代码
+
+   - 检查cpu型号是否支持虚拟化, CR4 VMXE检查是否已经开启
+   - 启用XSAVE/XRSTOR
+   - 配置 IA32_FEATURE_CONTROL MSR 并 锁定
+   - CR0 和 CR4 寄存器检查(各个位是否符合)
+   - 读取IA32_VMX_BASIC_MSR, 并验证信息
+   - 给VMCS id和分配frame
+   - 设置 CR4 的 VMXE 位
+   - 执行 `VMXON`
+
+   
 
 
 
