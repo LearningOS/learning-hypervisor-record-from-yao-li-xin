@@ -13,6 +13,7 @@
 - [Day8](#day8)
 - [Day9](#day9)
 - [Day10](#day10)
+- [Day11](#day11)
 
 
 
@@ -133,6 +134,12 @@
    - 设置 CR4 的 VMXE 位
    - 执行 `VMXON`
 
+   
+   
+### Day11
+尝试合并陈宏和我的测试代码依赖的Mock分配器, 实现AxMmHal和PagingHandler, 迁移到全局共享的地方
+   
+   
    
 
 
