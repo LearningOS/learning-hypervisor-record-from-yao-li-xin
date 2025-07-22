@@ -14,6 +14,7 @@
 - [Day9](#day9)
 - [Day10](#day10)
 - [Day11](#day11)
+- [Day12](#day12)
 
 
 
@@ -138,6 +139,11 @@
    
 ### Day11
 尝试合并陈宏和我的测试代码依赖的Mock分配器, 实现AxMmHal和PagingHandler, 迁移到全局共享的地方
+
+### Day12
+- commit链接: [feat: Implement unit tests for PhysFrame](https://github.com/arceos-hypervisor/axaddrspace/pull/17/commits/46e9581d51327f6e121774f7ef9fd8f142b4e4ac)
+- 重构了`test_fill_multiple_frames()`, 更自动化
+
    
    
    
