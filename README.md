@@ -15,6 +15,7 @@
 - [Day10](#day10)
 - [Day11](#day11)
 - [Day12](#day12)
+- [Day13](#day13)
 
 
 
@@ -143,6 +144,9 @@
 ### Day12
 - commit链接: [feat: Implement unit tests for PhysFrame](https://github.com/arceos-hypervisor/axaddrspace/pull/17/commits/46e9581d51327f6e121774f7ef9fd8f142b4e4ac)
 - 重构了`test_fill_multiple_frames()`, 更自动化
+
+### Day13
+今天回家, 晚上读了一些龙芯vcpu架构的相关文档, 但是没有找到有关初始硬件配置与检测的内容.
 
    
    
