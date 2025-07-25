@@ -17,6 +17,7 @@
 - [Day12](#day12)
 - [Day13](#day13)
 - [Day14](#day14)
+- [Day15](#day15)
 
 
 
@@ -147,11 +148,16 @@
 - 重构了`test_fill_multiple_frames()`, 更自动化
 
 ### Day13
-今天回家, 晚上读了一些龙芯vcpu架构的相关文档, 但是没有找到有关初始硬件配置与检测的内容.
+今天回家, 晚上读了一些龙芯vcpu架构的相关文档, 但是没有找到有关虚拟化初始硬件配置与检测的内容.
 
 ### Day14
 1. 更新了测试代码, 用了苏助教给的axin crate, 已经push到我fork仓库的分支上了
 2. 了解了虚拟机的的启动和退出流程, 查看了相关源码
+
+### Day15
+- 官网没有找到与虚拟化拓展相关的内容, 尝试向工作人员要一下
+- 了解了axvisor中vcpu设计框架, 相关`struct`, `trait`
+- [PR已合并](https://github.com/arceos-hypervisor/axaddrspace/pull/17)
    
    
 
