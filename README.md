@@ -18,6 +18,7 @@
 - [Day13](#day13)
 - [Day14](#day14)
 - [Day15](#day15)
+- [Day16](#day16)
 
 
 
@@ -158,6 +159,10 @@
 - 官网没有找到与虚拟化拓展相关的内容, 尝试向工作人员要一下
 - 了解了axvisor中vcpu设计框架, 相关`struct`, `trait`
 - [PR已合并](https://github.com/arceos-hypervisor/axaddrspace/pull/17)
+
+### Day16
+- 跑通最新的arceos for loongarch, 跑通了example下不需要` loongarch64-linux-musl-gcc`的几个测例
+- 想从LVZ文档中找到虚拟化使能相关信息, 只找到了判断是否支持虚拟化拓展, 询问了谢助教得到一些建议.
    
    
 
