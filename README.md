@@ -19,6 +19,7 @@
 - [Day14](#day14)
 - [Day15](#day15)
 - [Day16](#day16)
+- [Day17](#day17)
 
 
 
@@ -163,7 +164,11 @@
 ### Day16
 - 跑通最新的arceos for loongarch, 跑通了example下不需要` loongarch64-linux-musl-gcc`的几个测例
 - 想从LVZ文档中找到虚拟化使能相关信息, 只找到了判断是否支持虚拟化拓展, 询问了谢助教得到一些建议.
-   
+
+### Day17
+- 运行axvisor, 跟踪路径, 并阅读源码 
+- 回顾了一下hvisor的论文
+
    
 
 
