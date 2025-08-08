@@ -27,6 +27,7 @@
 - [Day22](#day22)
 
 
+
 ### Day1
 
 1. 今天主要阅读axvisor架构设计手册, 中断部分没有读完.
@@ -197,7 +198,7 @@
 等谢助教完成boot部分代码
 
 ### Day22
-完成了两个实验的整理, 在[hypervisor.m](hypervisor.md)d里, 闪到腰了, 卧床休息几天
+完成了两个实验的整理, 在[hypervisor.md](hypervisor.md)里, 闪到腰了, 卧床休息几天
 
 
    
