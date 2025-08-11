@@ -27,6 +27,7 @@
 - [Day22](#day22)
 - [Day23](#day23)
 - [Day24](#day24)
+- [Day25](#day25)
 
 
 
@@ -207,6 +208,25 @@
 
 ### Day24
 完成了h系列所有实验, 并对4个实验笔记进行了整理[hypervisor](riscv_hypervisor.md);
+
+### Day25
+- 查阅了axcpu中有关龙芯架构的部分, 初步整理了一些硬件的接口与封装的实现.
+- 通过x86_vcpu, 寻找其相关的虚拟化硬件实现代码的位置, 以检测虚拟化支持为例: 最终发现在raw-cpuid crate标准库里
+```rust
+    pub fn cpuid_count(a: u32, c: u32) -> CpuIdResult {
+        // Safety: CPUID is supported on all x86_64 CPUs and all x86 CPUs with
+        // SSE, but not by SGX.
+        let result = unsafe { self::arch::__cpuid_count(a, c) };
+
+        CpuIdResult {
+            eax: result.eax,
+            ebx: result.ebx,
+            ecx: result.ecx,
+            edx: result.edx,
+        }
+    }
+```
+
 
 
    

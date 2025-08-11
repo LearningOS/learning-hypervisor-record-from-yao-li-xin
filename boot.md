@@ -1,4 +1,4 @@
-
+## axplat_crates-LA-boot.rs分析
 
 ```12:15:axplat_crates/platforms/axplat-loongarch64-qemu-virt/src/boot.rs
 #[unsafe(link_section = ".bss.stack")]
