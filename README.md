@@ -26,6 +26,7 @@
 - [Day21](#day21)
 - [Day22](#day22)
 - [Day23](#day23)
+- [Day24](#day24)
 
 
 
@@ -185,7 +186,10 @@
 完成了两个实验, 了解了最简hypervisor, 以及如何进行二阶段地址映射, 初步写了文档, 没有整理完.
 
 ### Day21
-初步查阅了axplat_crate中有关龙芯的boot部分的代码并与ch, xzj讨论了如何去完成axvisor for LA.
+查阅了axplat_crates中的boot代码了解了龙芯架构,非虚拟化的启动流程, 并整理了相关文档:[boot](boot.md)
+
+### Day22
+与ch, xzj讨论了如何去完成axvisor for LA的启动部分boot.rs的虚拟化配置添加
 * 在系统启动初期，首先进行 CPU 能力检测。通过检查 `CPUCFG` 寄存器的 `LVZ` 扩展位（`bit10`），来确认当前硬件是否支持虚拟化功能。
 
 * 在硬件支持确认后，进行 Hypervisor 自身的初始化工作。配置必要的控制寄存器，例如 `GTLBC` 等，为管理 Guest 虚拟机和虚拟化资源做好准备。
@@ -196,14 +200,13 @@
 
 * 内存虚拟化实现： 借鉴其他架构,都是**两级地址翻译**。同时，关注 **TLB（地址转换后备缓冲区）同步**问题，确保 Guest 和 Host 的 TLB 一致性。`axcpu` 模块中已提供的相关接口。
 
-等谢助教完成boot部分代码
 
-### Day22
-完成了两个实验的整理, 在[hypervisor.md](hypervisor.md)里, 闪到腰了, 卧床休息几天
 
 ### Day23
-完成了h系列所有实验, 并对4个实验笔记进行了整理
-[hypervisor](riscv_hypervisor.md);
+完成了两个实验的整理, 在[hypervisor.md](hypervisor.md)里, 闪到腰了, 卧床休息几天
+
+### Day24
+完成了h系列所有实验, 并对4个实验笔记进行了整理[hypervisor](riscv_hypervisor.md);
 
 
    
