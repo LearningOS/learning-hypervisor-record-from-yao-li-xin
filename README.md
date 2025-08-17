@@ -235,6 +235,18 @@
 ### Day27
 通过hvisor, 初步整理了两阶段地址翻译, 同时继续阅读axvisor整体设计.
 
+### Day28
+- 整理了两阶段地址翻译的信息(仍需完善)[spt.md](./spt.md)
+- 初步尝试适配`axaddrspace`
+
+### Day29
+- 初步完成`axaddrspace`中`npt/arch`的适配
+    - 实现了 GenericPTE 和 PagingMetaData trait
+    - 实现了与 MappingFlags 的双向转换
+    - 使用 bitflags 定义页表项属性
+    - 实现了架构特定的 TLB 刷新
+    - 支持了不同内存属性的访问
+- 开始尝试和谢助教完成vcpu的适配
 
 
    
