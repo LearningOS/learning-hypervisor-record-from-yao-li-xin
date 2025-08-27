@@ -38,6 +38,7 @@
 - [Day33](#day33)
 - [Day34](#day34)
 - [Day35](#day35)
+- [Day36](#day36)
 
 
 
@@ -270,7 +271,7 @@
 - 对`axaddrspace`中的一些编译错误进行解决
 
 ### Day33
-- 解决了`axaddrspace`中的编译错误,以及补充了`flush_tlb` 上传到了xzj的仓库中, 已提pr
+- 解决了`axaddrspace`中的编译错误,以及补充了`flush_tlb` 上传到了xzj的仓库中的`loongarch64-support`支线, 已提pr
 - 初步根据xzj的仓库配置axvisor, 遇到一些问题
 
 ### Day34
@@ -281,6 +282,11 @@
 
 ### Day35
 - 初步完善了所有骨架的搭建, 为`loongarch_vcpu`暴露必要接口, 同时解决了build下的error, 以满足axvisor运行, 等待版本依赖问题解决尝试跑axvisor
+
+### Day36
+- `axvm`本地修改以推送到`loongarch64-support`支线
+    - toml文件, vcpu文件
+- 版本问题仍然没有解决, 考虑等待主线更新
    
 
 
