@@ -40,6 +40,8 @@
 - [Day35](#day35)
 - [Day36](#day36)
 - [Day37](#day37)
+- [Day38](#day38)
+- [Day39](#day39)
 
 
 
@@ -292,8 +294,15 @@
 ### Day37
 - 拉取新版本的`axvisor`进行龙芯配置, 统一相关库版本后解决之气那版本问题, 同时发现了因为axvisor结构改变所需的适配的新的问题 
    
+### Day38
+- 解决了`vmconfig`路径问题, 通过编译但是elf文件有问题使得bin文件为空, 初步认定为是axconfig.toml问题,发现没有使用我们的toml文件
+- 熟悉axvisor构建脚本, 指定到自己的toml后开始解决字段缺失问题, 增加`boot-stack-size`字段出现不合法提示暂未解决
 
-
+### Day39
+- 使用了`axplat_crates`的LA的toml文件, 发现仍然有空bin文件的问题.
+- 解决了 增加`boot-stack-size`字段出现不合法提示的问题
+- 发现编译未指定feature, 在对源码、toml、链接器脚本等做出修改后成功跑出“axvisor”界面！
+- 后续准备沟通改善链接器脚本，对feature指定相关的代码进行重构
 
 
 
