@@ -2,7 +2,6 @@
 
 ## 目录
 
-### 7月
 - [Day1](#day1)
 - [Day2](#day2)
 - [Day3](#day3)
@@ -42,6 +41,8 @@
 - [Day37](#day37)
 - [Day38](#day38)
 - [Day39](#day39)
+- [Day40](#day40)
+- [Day40](#day41)
 
 
 
@@ -303,6 +304,14 @@
 - 解决了 增加`boot-stack-size`字段出现不合法提示的问题
 - 发现编译未指定feature, 在对源码、toml、链接器脚本等做出修改后成功跑出“axvisor”界面！
 - 后续准备沟通改善链接器脚本，对feature指定相关的代码进行重构
+
+### Day40
+- 查阅了杨助教给的链接，了解了.bss段的特殊处理，要明确标明它的lma
+- 根据同样的原理尝试更改`.percpu`段,为解决
+
+### Day41
+- `readelf -l ...`发现`.percpu`段和`.bss`段, 被合并成了同一个加载段, 问题不一定处在.bss段
+- 更改`.bss`段, 解决 `The image segments are too big to load`问题
 
 
 
