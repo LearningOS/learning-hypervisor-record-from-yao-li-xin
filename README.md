@@ -42,7 +42,7 @@
 - [Day38](#day38)
 - [Day39](#day39)
 - [Day40](#day40)
-- [Day40](#day41)
+- [Day41](#day41)
 
 
 
