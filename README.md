@@ -1,7 +1,7 @@
 # learning-hypervisor-record-from-yao-li-xin
 
 ## 目录
-
+### summer
 - [Day1](#day1)
 - [Day2](#day2)
 - [Day3](#day3)
@@ -43,6 +43,8 @@
 - [Day39](#day39)
 - [Day40](#day40)
 - [Day41](#day41)
+### 11月
+- [11.7](#117)
 
 
 
@@ -313,5 +315,5 @@
 - `readelf -l ...`发现`.percpu`段和`.bss`段, 被合并成了同一个加载段, 问题不一定处在.bss段
 - 更改`.bss`段, 解决 `The image segments are too big to load`问题
 
-
-
+### 11.7
+- 建造仓库：[Hypervisor-in-1k-lines](https://github.com/manchangfengxu/Hypervisor-in-1k-lines)
