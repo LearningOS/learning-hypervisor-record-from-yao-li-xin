@@ -45,6 +45,7 @@
 - [Day41](#day41)
 ### 11月
 - [11.7](#117)
+- [11.8](#118)
 
 
 
@@ -317,3 +318,17 @@
 
 ### 11.7
 - 建造仓库：[Hypervisor-in-1k-lines](https://github.com/manchangfengxu/Hypervisor-in-1k-lines)
+
+### 11.8
+- 完成初次riscv虚拟化进入
+```rust
+    unsafe {
+        asm!(
+            "csrw hstatus, {hstatus}",
+            "csrw sepc, {sepc}",
+            "sret",
+            hstatus = in(reg) hstatus,
+            sepc = in(reg) sepc,
+        );
+    }
+```
