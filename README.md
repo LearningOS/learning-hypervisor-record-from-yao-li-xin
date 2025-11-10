@@ -46,6 +46,7 @@
 ### 11月
 - [11.7](#117)
 - [11.8](#118)
+- [11.10](#1110)
 
 
 
@@ -321,7 +322,7 @@
 
 ### 11.8
 - 完成初次riscv虚拟化进入
-```rust
+``` rust
     unsafe {
         asm!(
             "csrw hstatus, {hstatus}",
@@ -331,4 +332,33 @@
             sepc = in(reg) sepc,
         );
     }
+```
+
+### 11.10
+- 设置二级映射，hgatp
+- 填充bin文件，映射sept = guest_entry, 并在sret时成功进入
+``` rust
+    unsafe {
+        asm!(
+            "csrw hstatus, {hstatus}",
+            "csrw hgatp, {hgatp}",
+            "csrw sepc, {sepc}",
+            "sret",
+            hstatus = in(reg) hstatus,
+            hgatp = in(reg) table.hgatp(),
+            sepc = in(reg) sepc,
+        );
+    }
+```
+```
+(qemu) info registers
+
+CPU#0
+ V      =   1
+ pc       0000000000100000
+ mhartid  0000000000000000
+ mstatus  0000000a00000080
+ hstatus  0000000200000000
+ vsstatus 0000000a00000000
+......
 ```
