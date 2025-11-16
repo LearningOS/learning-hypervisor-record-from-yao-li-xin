@@ -1,6 +1,17 @@
 # learning-hypervisor-record-from-yao-li-xing
 
 > 学习 hypervisor 相关内容的记录仓库。
+> - 暑期日志：`docs/logs/summer-2025.md`,记录了龙芯实习的日报
+> - 2025 年 11 月日志：`docs/logs/2025-11.md`,用来学习riscv架构下的hypervisor
+
+### 专题笔记（notes）
+- [LoongArch 虚拟化环境开启（hvisor 提取）](docs/notes/hvisor_note.md)
+- [LoongArch 启动流程 boot.rs 分析](docs/notes/boot.md)
+- [两阶段地址翻译与嵌套页表（LoongArch）](docs/notes/spt.md)
+- [RISC-V Hypervisor 实验笔记](docs/notes/riscv_hypervisor.md)
+- [Axvisor main.rs 启动分析](docs/notes/axvisor_start.md)
+- [月报(7.10 - 8.10)](docs/notes/monthly_report_(7.10-8.10).md)
+- jailhouse学习过程中未整理的一些笔记: docs/notes/jailhouse_hivisor
 
 ## 目录
 
@@ -51,19 +62,5 @@
 - [11.7](docs/logs/2025-11.md#117)
 - [11.8](docs/logs/2025-11.md#118)
 - [11.10](docs/logs/2025-11.md#1110)
+- [11.15](docs/logs/2025-11.md#1115)
 - [11.16](docs/logs/2025-11.md#1116)
-
-> 详细的每日学习记录已经拆分到独立的日志文件中：
-> - 暑期日志：`docs/logs/summer-2025.md`
-> - 2025 年 11 月日志：`docs/logs/2025-11.md`
-
-### 专题笔记（notes）
-- [LoongArch 虚拟化环境开启（hvisor 提取）](docs/notes/hvisor_note.md)
-- [LoongArch 启动流程 boot.rs 分析](docs/notes/boot.md)
-- [两阶段地址翻译与嵌套页表（LoongArch）](docs/notes/spt.md)
-- [RISC-V Hypervisor 实验笔记](docs/notes/riscv_hypervisor.md)
-- [Axvisor main.rs 启动分析](docs/notes/axvisor_start.md)
-- [月报(7.10 - 8.10)](docs/notes/monthly_report_(7.10-8.10).md)
-- jailhouse学习过程中未整理的一些笔记: docs/notes/jailhouse_hivisor
-
-
