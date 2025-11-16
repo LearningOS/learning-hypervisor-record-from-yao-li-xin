@@ -83,7 +83,7 @@ fn init_mmu() {
 #[unsafe(no_mangle)]
 #[unsafe(link_section = ".text.boot")]
 unsafe extern "C" fn _start() -> ! {
-    core::arch::naked_asm!("
+    core::arch::naked_asm!("`
         ori         $t0, $zero, 0x1     # CSR_DMW1_PLV0
         lu52i.d     $t0, $t0, -2048     # UC, PLV0, 0x8000 xxxx xxxx xxxx
         csrwr       $t0, 0x180          # LOONGARCH_CSR_DMWIN0
@@ -119,6 +119,3 @@ unsafe extern "C" fn _start() -> ! {
 5. 初始化MMU
 6. 获取CPU ID
 7. 跳转到主函数
-
-
-
