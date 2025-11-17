@@ -2,7 +2,7 @@
 
 > 学习 hypervisor 相关内容的记录仓库。
 > - 暑期日志：`docs/logs/summer-2025.md`,记录了龙芯实习的日报
-> - 2025 年 11 月日志：`docs/logs/2025-11.md`,用来学习riscv架构下的hypervisor
+> - 2025 年 11 月日志：`docs/logs/2025-11.md`,从0构建精简化的riscv hypervisor，学习hypervisor机理
 
 ### 专题笔记（notes）
 - [LoongArch 虚拟化环境开启（hvisor 提取）](docs/notes/hvisor_note.md)
